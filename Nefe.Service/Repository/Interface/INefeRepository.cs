@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace Nefe.Service.Repository.Interface
 {
-    public interface IGenericNefeRepository<T> where T : class
+    public interface INefeRepository<T> where T : class
     {
         T FindById(int id);
         IEnumerable<T> Select(Expression<Func<T, bool>> filter = null);

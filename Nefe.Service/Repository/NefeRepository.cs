@@ -7,11 +7,11 @@ using System.Data.Entity;
 
 namespace Nefe.Service.Repository
 {
-    public class GenericNefeRepository<T> : IGenericNefeRepository<T> where T : class
+    public class NefeRepository<T> : INefeRepository<T> where T : class
     {
         private readonly DbSet<T> _dbSet;
 
-        public GenericNefeRepository(DbContext nefeDataContext)
+        public NefeRepository(DbContext nefeDataContext)
         {
             _dbSet = nefeDataContext.Set<T>();
         }

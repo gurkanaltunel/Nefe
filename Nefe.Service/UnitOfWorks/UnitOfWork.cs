@@ -8,18 +8,18 @@ namespace Nefe.Service.UnitOfWorks
     public class UnitOfWork : IUnitOfWork
     {
         private readonly NefeDataContext _nefeDataContext = new NefeDataContext();
-        private GenericNefeRepository<User> _userRepository;
-        private GenericNefeRepository<Role> _roleRepository;
+        private NefeRepository<User> _userRepository;
+        private NefeRepository<Role> _roleRepository;
         private bool _disposed;
 
-        public GenericNefeRepository<User> UserRepository
+        public NefeRepository<User> UserRepository
         {
-            get { return _userRepository ?? (_userRepository = new GenericNefeRepository<User>(_nefeDataContext)); }
+            get { return _userRepository ?? (_userRepository = new NefeRepository<User>(_nefeDataContext)); }
         }
 
-        public GenericNefeRepository<Role> RoleRepository
+        public NefeRepository<Role> RoleRepository
         {
-            get { return _roleRepository ?? (_roleRepository = new GenericNefeRepository<Role>(_nefeDataContext)); }
+            get { return _roleRepository ?? (_roleRepository = new NefeRepository<Role>(_nefeDataContext)); }
         }
 
         public void Save()
