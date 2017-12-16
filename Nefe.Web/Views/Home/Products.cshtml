@@ -1,0 +1,253 @@
+﻿<div class="row">
+    <div class="col-sm-3">
+        <div class="filter-sidebar">
+            <div class="title"><span>Arama Filtreleri</span></div>
+            <ul>
+                <li>kategori: kuru yemiş<a class="remove-filter"><i class="fa fa-remove"></i></a></li>
+                <li>stok durumu: var<a class="remove-filter"><i class="fa fa-remove"></i></a></li>
+                <li>fiyatı: 15-30 tl<a class="remove-filter"><i class="fa fa-remove"></i></a></li>
+            </ul>
+        </div>
+        <div class="filter-sidebar">
+            <div class="title"><span>Kategoriler</span></div>
+            <ul>
+                <li><div class="checkbox"><input type="checkbox" id="dryFruits" /><label for="dryFruits">Kuru Yemiş(10)</label></div></li>
+                <li><div class="checkbox"><input type="checkbox" id="oliveAndOliveOil" /><label for="oliveAndOliveOil">Zeytin & Zeytinyağı(4)</label></div></li>
+                <li><div class="checkbox"><input type="checkbox" id="homeMade" /><label for="homeMade">Ev yapımı ürünler(5)</label></div></li>
+            </ul>
+        </div>
+        <div class="filter-sidebar">
+            <div class="title"><span>Stok Durumu</span></div>
+            <ul>
+                <li><div class="checkbox"><input type="checkbox" id="availability" /><label for="availability">Stokta Var(50)</label></div></li>
+            </ul>
+        </div>
+        <div class="filter-sidebar">
+            <div class="title"><span>Fiyat Aralığı</span></div>
+            <div id="range-value" style="margin-bottom:10px">
+                Fiyat :
+                <span id="min-price"></span>
+                -
+                <span id="max-price"></span><i class="fa fa-try" aria-hidden="true" style="padding-left:10px"></i>
+            </div>
+            <input type="hidden" name="min-price" />
+            <input type="hidden" name="max-price" />
+            <div id="price-range">
+                <div id="slider">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="title"><span>Hangi kategori seçildiyse</span></div>
+        <div class="col-sm-4 col-md-3 box-product-outer">
+            <div class="slider widget-slider">
+                <div class="box-product">
+                    <div class="img-wrapper">
+                        <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Flower" class="img-responsive"></a>
+                        <div class="tags">
+                            <div class="label-tags">
+                                <span class="label label-danger">popüler</span>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <h6>
+                        <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                    </h6>
+                    <div class="price">
+                        <div>34.00 tl</div>
+                    </div>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-3 box-product-outer">
+            <div class="slider widget-slider">
+                <div class="box-product">
+                    <div class="img-wrapper">
+                        <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Flower" class="img-responsive"></a>
+                        <div class="tags">
+                            <div class="label-tags">
+                                <span class="label label-danger">popüler</span>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <h6>
+                        <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                    </h6>
+                    <div class="price">
+                        <div>34.00 tl</div>
+                    </div>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-3 box-product-outer">
+            <div class="slider widget-slider">
+                <div class="box-product">
+                    <div class="img-wrapper">
+                        <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Flower" class="img-responsive"></a>
+                        <div class="tags">
+                            <div class="label-tags">
+                                <span class="label label-danger">popüler</span>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <h6>
+                        <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                    </h6>
+                    <div class="price">
+                        <div>34.00 tl</div>
+                    </div>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-3 box-product-outer">
+            <div class="slider widget-slider">
+                <div class="box-product">
+                    <div class="img-wrapper">
+                        <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Flower" class="img-responsive"></a>
+                        <div class="tags">
+                            <div class="label-tags">
+                                <span class="label label-danger">popüler</span>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <h6>
+                        <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                    </h6>
+                    <div class="price">
+                        <div>34.00 tl</div>
+                    </div>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-3 box-product-outer">
+            <div class="slider widget-slider">
+                <div class="box-product">
+                    <div class="img-wrapper">
+                        <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Flower" class="img-responsive"></a>
+                        <div class="tags">
+                            <div class="label-tags">
+                                <span class="label label-danger">popüler</span>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <h6>
+                        <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                    </h6>
+                    <div class="price">
+                        <div>34.00 tl</div>
+                    </div>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section featuredScripts{
+
+    @Scripts.Render("~/Script/NoUISlider")
+
+<script>
+    var price = document.getElementById('slider');
+    noUiSlider.create(price, {
+        start: [20, 60],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 100
+        }
+    });
+    price.noUiSlider.on('update', function (values, handle) {
+        var value = values[handle];
+        if (handle) {
+            $('#max-price').text(Math.round(value));
+            $('input[name="max-price"]').text(Math.round(value));
+        } else {
+            $('#min-price').text(Math.round(value));
+            $('input[name="min-price"]').text(Math.round(value));
+        }
+    });
+
+</script>
+}

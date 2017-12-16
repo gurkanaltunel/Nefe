@@ -1,0 +1,400 @@
+﻿@section featuredStyles{
+    @Styles.Render("~/Css/Select2")
+}
+<div class="row">
+    <div class="col-md-9">
+        <div>
+            <div id="inputPersonelInfo">
+                <div class="title"><span>Adres bilgileri</span></div>
+                <form id="checkoutForm">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="firstNameInput">İsim (*)</label>
+                            <input type="text" class="form-control" id="firstNameInput" placeholder="İsim" />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="lastNameInput">Soyisim</label>
+                            <input type="text" class="form-control" id="lastNameInput" placeholder="Soyisim" />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="emailInput">E-mail (*)</label>
+                            <input type="text" class="form-control" id="emailInput" placeholder="E-mail" />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="phoneInput">Telefon (*)</label>
+                            <input id="phoneInput" class="form-control" type="text" placeholder="(XXX) XXX-XXXX" maxlength="14" />
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label for="adresInput">Adres (*)</label>
+                            <textarea class="form-control" rows="3" id="adresInput"></textarea>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="cityInput">İl (*)</label>
+                            <select class="form-control" id="cityInput">
+                                <option>Seçiniz</option>
+                                <option value="1">İstanbul</option>
+                                <option value="2">İzmir</option>
+                                <option value="3">Ankara</option>
+                                <option value="4">Aydın</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="regionInput">İlçe (*)</label>
+                            <select class="form-control" id="regionInput">
+                                <option>Seçiniz</option>
+                                <option value="1">Kadıköy</option>
+                                <option value="2">Ataşehir</option>
+                                <option value="3">Üsküdar</option>
+                                <option value="4">Keçiören</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="voucherInput">Kampanya Kodu</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="voucherInput" placeholder="kampanya kodu" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Uygula</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label for="notesInput">Eklemek istediğiniz bişey?</label>
+                            <textarea class="form-control" rows="3" id="notesInput"></textarea>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-cart">
+                            <thead>
+                                <tr>
+                                    <th>Ürün</th>
+                                    <th>Açıklama</th>
+                                    <th>Adet</th>
+                                    <th>Birim Fiyatı</th>
+                                    <th>Ara Toplam</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="img-cart">
+                                        <a href='@Url.Action("Detail","Test")'><img alt="ürün" src="~/Content/images/p1-small (1).jpg" class="img-thumbnail" /></a>
+                                    </td>
+                                    <td><p><a href='@Url.Action("Detail","Test")'>Organik incir</a><br /><small>5 kg</small></p></td>
+                                    <td>
+                                        <div class="input-qty">
+                                            <div class="input-group bootstrap-touchspin">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default bootstrap-touchspin-down" type="button">-</button>
+                                                </span>
+                                                <span class="input-group-addon bootstrap-touchspin-prefix" style="display:none"></span>
+                                                <input type="text" value="1" class="form-control text-center" style="display:block" />
+                                                <span class="input-group-addon bootstrap-touchspin-postfix" style="display:none"></span>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default bootstrap-touchspin-up" type="button">+</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="unit">25 tl</td>
+                                    <td class="sub">125 tl</td>
+                                    <td class="action">
+                                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Güncelle"><i class="fa fa-refresh"></i></a>
+                                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Sil"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="img-cart">
+                                        <a href='@Url.Action("Detail","Test")'><img alt="ürün" src="~/Content/images/p2-small (1).jpg" class="img-thumbnail" /></a>
+                                    </td>
+                                    <td><p><a href='@Url.Action("Detail","Test")'>Organik zeytinyağı</a><br /><small>5 kg</small></p></td>
+                                    <td>
+                                        <div class="input-qty">
+                                            <div class="input-group bootstrap-touchspin">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default bootstrap-touchspin-down" type="button">-</button>
+                                                </span>
+                                                <span class="input-group-addon bootstrap-touchspin-prefix" style="display:none"></span>
+                                                <input type="text" value="1" class="form-control text-center" style="display:block" />
+                                                <span class="input-group-addon bootstrap-touchspin-postfix" style="display:none"></span>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default bootstrap-touchspin-up" type="button">+</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="unit">25 tl</td>
+                                    <td class="sub">125 tl</td>
+                                    <td class="action">
+                                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Güncelle"><i class="fa fa-refresh"></i></a>
+                                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Sil"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="img-cart">
+                                        <a href='@Url.Action("Detail","Test")'><img alt="ürün" src="~/Content/images/p3-small (1).jpg" class="img-thumbnail" /></a>
+                                    </td>
+                                    <td><p><a href='@Url.Action("Detail","Test")'>Antep Fıstığı</a><br /><small>5 kg</small></p></td>
+                                    <td>
+                                        <div class="input-qty">
+                                            <div class="input-group bootstrap-touchspin">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default bootstrap-touchspin-down" type="button">-</button>
+                                                </span>
+                                                <span class="input-group-addon bootstrap-touchspin-prefix" style="display:none"></span>
+                                                <input type="text" value="1" class="form-control text-center" style="display:block" />
+                                                <span class="input-group-addon bootstrap-touchspin-postfix" style="display:none"></span>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default bootstrap-touchspin-up" type="button">+</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="unit">25 tl</td>
+                                    <td class="sub">125 tl</td>
+                                    <td class="action">
+                                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Güncelle"><i class="fa fa-refresh"></i></a>
+                                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Sil"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="right">Toplam</td>
+                                    <td colspan="2"><b>375 tl</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <div id="inputAccountInfo" style="display:none">
+                <div class="title"><span>Kart bilgileri</span></div>
+                <form>
+                    <div class="form-group col-sm-6">
+                        <label for="inputCardNumber">Kart Numarası</label>
+                        <input type="text" id="inputCardNumber" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="inputCardOwnerFullName">Kart Üzerindeki İsim</label>
+                        <input type="text" id="inputCardOwnerFullName" class="form-control" placeholder="kart üzerindeki isim" />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="inputCardLastDate">Son Kullanma Tarihi</label>
+                        <select class="select2">
+                            <option>Ay</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>
+                        <select class="select2">
+                            <option>Yıl</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="inputCardSecurityCode">Güvenlik Kodu</label>
+                        <input type="text" id="inputCardSecurityCode" class="form-control" style="width:150px"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a class="btn btn-info btn-sm pull-left" href='@Url.Action("ShoppingCart","Test")'>
+            <i class="fa fa-arrow-circle-left"></i>
+            Sepete gözat
+        </a>
+        <button type="button" class="btn btn-info btn-sm pull-right" onclick="ShowPaymentView()">
+            Ödeme adımına devam et
+            <i class="fa fa-arrow-circle-right"></i>
+        </button>
+    </div>
+    <div class="col-md-3 hidden-sm hidden-xs">
+        <div class="title">
+            <span>Yeniler</span>
+        </div>
+        <div class="slider widget-slider">
+            <div id="sideCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="box-product">
+                            <div class="img-wrapper">
+                                <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Chania" class="img-responsive"></a>
+                                <div class="tags tags-left">
+                                    <div class="label-tags">
+                                        <span class="label label-success">Yeni</span>
+                                    </div>
+                                </div>
+                                <div class="option">
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                        <span class="glyphicon glyphicon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h6>
+                                <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                            </h6>
+                            <div class="price">
+                                <div>34.00 tl</div>
+                            </div>
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box-product">
+                            <div class="img-wrapper">
+                                <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p1 (1).jpg" alt="Chania" class="img-responsive"></a>
+                                <div class="tags tags-left">
+                                    <div class="label-tags">
+                                        <span class="label label-success">Yeni</span>
+                                    </div>
+                                </div>
+                                <div class="option">
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                        <span class="glyphicon glyphicon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h6>
+                                <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                            </h6>
+                            <div class="price">
+                                <div>34.00 tl</div>
+                            </div>
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box-product">
+                            <div class="img-wrapper">
+                                <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p2 (1).jpg" alt="Chania" class="img-responsive"></a>
+                                <div class="tags tags-left">
+                                    <div class="label-tags">
+                                        <span class="label label-success">Yeni</span>
+                                    </div>
+                                </div>
+                                <div class="option">
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                        <span class="glyphicon glyphicon-heart"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h6>
+                                <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                            </h6>
+                            <div class="price">
+                                <div>34.00 tl</div>
+                            </div>
+                            <div class="rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left side-carousel-control" href="#sideCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right side-carousel-control" href="#sideCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section featuredScripts{
+    @Scripts.Render("~/Script/Select2")
+    <script>
+
+        $('#phoneInput', '#checkoutForm');
+
+        $('#phoneInput').keydown(function (e) {
+            var key = e.charCode || e.keyCode || 0;
+            $phone = $(this);
+
+            // Don't let them remove the starting '('
+            if ($phone.val().length === 1 && (key === 8 || key === 46)) {
+                $phone.val('(');
+                return false;
+            }
+                // Reset if they highlight and type over first char.
+            else if ($phone.val().charAt(0) !== '(') {
+                $phone.val('(');
+            }
+
+            // Auto-format- do not expose the mask as the user begins to type
+            if (key !== 8 && key !== 9) {
+                if ($phone.val().length === 4) {
+                    $phone.val($phone.val() + ')');
+                }
+                if ($phone.val().length === 5) {
+                    $phone.val($phone.val() + ' ');
+                }
+                if ($phone.val().length === 9) {
+                    $phone.val($phone.val() + '-');
+                }
+            }
+
+            // Allow numeric (and tab, backspace, delete) keys only
+            return (key == 8 ||
+                    key == 9 ||
+                    key == 46 ||
+                    (key >= 48 && key <= 57) ||
+                    (key >= 96 && key <= 105));
+        });
+
+        $('#phoneInput').bind('focus click', function () {
+            $phone = $(this);
+
+            if ($phone.val().length === 0) {
+                $phone.val('(');
+            }
+            else {
+                var val = $phone.val();
+                $phone.val('').val(val); // Ensure cursor remains at the end
+            }
+        });
+
+        $('#phoneInput').blur(function () {
+            $phone = $(this);
+
+            if ($phone.val() === '(') {
+                $phone.val('');
+            }
+        });
+
+
+        ShowPaymentView = function () {
+            $('#inputPersonelInfo').hide();
+            $('#inputAccountInfo').show();
+            $('.select2').select2();
+        }
+
+    </script>
+}

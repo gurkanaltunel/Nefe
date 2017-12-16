@@ -1,0 +1,395 @@
+﻿body {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #666;
+}
+
+a {
+    color: #666;
+}
+
+.top-header {
+    padding: 3px 0;
+    background-color:#5cb85c;
+
+}
+
+    .top-header .container .row .col-xs-12 > div {
+        padding: 5px 10px;
+        
+    }
+
+.header-language {
+    padding-left: 0 !important;
+}
+
+    .header-language .dropdown a img {
+        margin-top: -2px;
+        margin-right: 5px;
+    }
+
+.top-header a {
+    color: #fff;
+}
+
+    .top-header a:hover {
+        color: #fff;
+    }
+
+.middle-header {
+    background: #f9f9f9;
+}
+
+.main-header {
+    padding: 15px 0;
+}
+
+.navbar {
+    min-height: inherit;
+    border: 0;
+    background-color: #f3f3f3;
+}
+
+.title {
+    border-bottom: solid 3px #90caf9;
+    font-size: 18px;
+    line-height: 1px;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+    .title span {
+        border-bottom: solid 3px #1e88e5;
+        display: inline-block;
+        margin-bottom: -3px;
+        padding-bottom: 10px;
+    }
+
+.slider {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.widget-slider {
+    padding: 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 80.00%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+    .video-container iframe, .video-container object, .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.video-title {
+    padding: 1px 1px 1px 1px;
+}
+
+    .video-title h4 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+.video-detay {
+    padding: 3px;
+}
+
+    .video-detay a {
+        color: #000000;
+    }
+
+.search-box {
+    margin-top: 20px;
+}
+
+.shopping-cart {
+    margin-top: 15px;
+    position: relative;
+}
+
+    .shopping-cart > button {
+        background-color: #efefef;
+        float: right;
+        font-size: 15px;
+        color: #666;
+        padding: 8px 25px;
+        border-color: transparent;
+        font-family: Arial;
+    }
+
+    .shopping-cart .dropdown-menu {
+        right: 15px;
+        overflow-y: auto;
+        max-height: 400px;
+        padding: 10px 10px 0;
+    }
+
+    .shopping-cart .media-body div {
+        color: #f44336;
+    }
+
+.subtotal-cart {
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .subtotal-cart span {
+        color: #f44336;
+    }
+
+.cart-checkout-btn {
+    margin-bottom: 10px;
+}
+
+.box-product .img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-product h6 a {
+    line-height: 1.4;
+}
+
+.box-product .img-wrapper .tags {
+    position: absolute;
+    overflow: visible;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    vertical-align: inherit;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.box-product .img-wrapper .tags-left {
+    left: 0;
+    direction: ltr;
+}
+
+.box-product .img-wrapper .tags .label-tags {
+    display: table;
+    margin: 1px 0 0 0;
+    text-align: left;
+    opacity: .92;
+    direction: ltr;
+}
+
+.box-product .img-wrapper .option {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    width: auto;
+    height: 28px;
+    transition: all .2s ease;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(0,0,0,55);
+}
+
+    .box-product .img-wrapper .option > a {
+        font-size: 18px;
+        font-weight: normal;
+        display: inline-block;
+        padding: 0 4px;
+        color: #fff;
+    }
+
+.price {
+    margin-bottom: 5px;
+    color: #f44336;
+}
+
+.rating span {
+    color: #fc0;
+}
+
+.image-detail {
+    margin-bottom: 10px;
+}
+
+    .image-detail img {
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+/*.owl-carousel .owl-loaded {
+    display: block;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+}*/
+
+/*.owl-stage a:hover {
+    cursor: pointer;
+}*/
+
+.img-thumbnail {
+    border-radius: 0;
+}
+
+.title-detail {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.table-detail tr td:first-child {
+    width: 150px;
+}
+
+    .table-detail tr td:first-child::after {
+        float: right;
+        content: ':';
+    }
+
+.table-detail tr td {
+    vertical-align: middle !important;
+}
+
+    .table-detail tr td.btn-action::after {
+        content: '';
+    }
+
+.input-qty {
+    width: 150px;
+}
+
+.product-rating {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #fc0;
+}
+
+.input-rating {
+    font-size: 24px;
+    display: inline-block;
+    color: #fc0;
+}
+
+.row-related {
+    margin-top: 20px;
+}
+
+.box-product-outer {
+    margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.filter-sidebar {
+    margin-bottom: 25px;
+}
+
+    .filter-sidebar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .filter-sidebar ul li {
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+            .filter-sidebar ul li a.remove-filter {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+.price-range {
+    overflow: hidden;
+    margin-top: 5px;
+    padding: 3px 0;
+}
+
+.noUi-target {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.noUi-horizontal {
+    height: 11px;
+}
+
+.noUi-background {
+    background: #dbdbdb;
+}
+
+.noUi-origin {
+    border-radius: 0;
+}
+
+.noUi-connect {
+    background: #5cb85c;
+    box-shadow: none;
+}
+
+.noUi-handle {
+    cursor: default;
+    border: 0;
+    border-radius: 0;
+    background-color: #797979;
+    box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -3px;
+    left: -9px;
+    width: 17px;
+    height: 17px;
+}
+
+.faq-panel h4 {
+    font-size: 13px;
+}
+
+.table-cart .img-cart {
+    width: 77px;
+}
+
+.table-cart .img-cart img{
+    width:50px;
+}
+
+.table-cart .unit .sub .action {
+    width: 100px;
+}
+
+.myFooter {
+    background-color: #373939;
+    height: 150px;
+    font-size: 12px;
+    margin-top: 25px;
+    padding: 0px;
+    color: #bababa;
+}
+
+.copyright {
+    background-color: #120f0f;
+    text-align: center;
+    height: 35px;
+    margin: 0px;
+    padding: 10px;
+}

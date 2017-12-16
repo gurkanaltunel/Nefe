@@ -1,0 +1,60 @@
+﻿<div class="col-xs-12">
+    <div class="title"><span>Favori Ürünlerim</span></div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-cart">
+            <thead>
+                <tr>
+                    <th>Ürün</th>
+                    <th>Açıklama</th>
+                    <th>Eklenen tarih</th>
+                    <th>Stok durumu</th>
+                    <th>Fiyatı</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="img-cart">
+                        <a href='@Url.Action("Detail","Test")'><img alt="ürün" src="~/Content/images/p1-small (1).jpg" class="img-thumbnail" /></a>
+                    </td>
+                    <td><p><a href='@Url.Action("Detail","Test")'>Organik incir</a><br /><small>5 kg</small></p></td>
+                    <td>@DateTime.Now.ToShortDateString()</td>
+                    <td><span class="label label-success">Var</span></td>
+                    <td class="unit">25 tl/kg</td>
+                    <td class="action">
+                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Güncelle"><i class="fa fa-refresh"></i></a>
+                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Sil"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="img-cart">
+                        <a href='@Url.Action("Detail","Test")'><img alt="ürün" src="~/Content/images/p2-small (1).jpg" class="img-thumbnail" /></a>
+                    </td>
+                    <td><p><a href='@Url.Action("Detail","Test")'>Organik zeytinyağı</a><br /><small>5 kg</small></p></td>
+                    <td>@DateTime.Now.ToShortDateString()</td>
+                    <td><span class="label label-danger">Yok</span></td>
+                    <td class="unit">25 tl/kg</td>
+                    <td class="action">
+                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Güncelle"><i class="fa fa-refresh"></i></a>
+                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Sil"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="img-cart">
+                        <a href='@Url.Action("Detail","Test")'><img alt="ürün" src="~/Content/images/p3-small (1).jpg" class="img-thumbnail" /></a>
+                    </td>
+                    <td><p><a href='@Url.Action("Detail","Test")'>Antep fıstığı</a><br /><small>5 kg</small></p></td>
+                    <td>@DateTime.Now.ToShortDateString()</td>
+                    <td><span class="label label-success">Var</span></td>
+                    <td class="unit">25 tl/kg</td>
+                    <td class="action">
+                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Güncelle"><i class="fa fa-refresh"></i></a>
+                        <a href="#" class="remove_cart" rel="2" data-placement="top" data-toggle="tooltip" data-original-title="Sil"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-info btn-sm pull-left"><i class="fa fa-arrow-circle-left"></i> Alışverişe Devam Et</button>
+    <button type="button" class="btn btn-info btn-sm pull-right">Alışveriş sepetine git <i class="fa fa-arrow-circle-right"></i></button>
+</div>

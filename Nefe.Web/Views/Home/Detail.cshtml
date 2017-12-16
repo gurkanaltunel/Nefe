@@ -1,0 +1,237 @@
+﻿@section featuredStyles{
+    @Styles.Render("~/Css/Select2")
+    @Styles.Render("~/Css/OwlCarousel")
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="image-detail">
+            <img src="~/Content/images/p3 (1).jpg" id="imageDetail" />
+        </div>
+        <div class="products-slider-detail owl-carousel owl-loaded owl-text-select-on">
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform:translate3d(0px,0px,0px);transition:0s;width:365px">
+                    <div class="owl-item active" style="margin-right:5px;width:86.25px">
+                        <a><img src="~/Content/images/p3 (1).jpg" class="img-thumbnail" alt="zoom" /></a>
+                    </div>
+                    <div class="owl-item active" style="margin-right:5px;width:86.25px">
+                        <a><img src="~/Content/images/p6 (1).jpg" class="img-thumbnail" alt="zoom" /></a>
+                    </div>
+                    <div class="owl-item active" style="margin-right:5px;width:86.25px">
+                        <a><img src="~/Content/images/p7 (1).jpg" class="img-thumbnail" alt="zoom" /></a>
+                    </div>
+                    <div class="owl-item active" style="margin-right:5px;width:86.25px">
+                        <a><img src="~/Content/images/p4 (1).jpg" class="img-thumbnail" alt="zoom" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="title-detail">Ürün başlığı</div>
+        <table class="table table-detail">
+            <tbody>
+                <tr><td>Stok durumu</td><td>Var(miktarı)</td></tr>
+                <tr>
+                    <td>Adet</td>
+                    <td>
+                        <div class="input-qty">
+                            <div class="input-group bootstrap-touchspin">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default bootstrap-touchspin-down" type="button">-</button>
+                                </span>
+                                <span class="input-group-addon bootstrap-touchspin-prefix" style="display:none"></span>
+                                <input type="text" value="1" id="productQty" class="form-control text-center" style="display:block" />
+                                <span class="input-group-addon bootstrap-touchspin-postfix" style="display:none"></span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default bootstrap-touchspin-up" type="button">+</button>
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kg</td>
+                    <td>
+                        <select class="select2" id="size" style="width:50px">
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CheckBox</td>
+                    <td>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox1" />
+                            <label for="checkbox1">xxx</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox2" />
+                            <label for="checkbox2">yyy</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btn-action"></td>
+                    <td>
+                        <button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-shopping-cart" style="padding-right:3px;"></span>Sepete At</button>
+                        <button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart" style="padding-right:3px;"></span>Favorilere Ekle</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a href="#desc" aria-controls="desc" role="tab" data-toggle="tab" aria-expanded="false">Açıklaması</a>
+            </li>
+            <li role="presentation">
+                <a href="#review" aria-controls="review" role="tab" data-toggle="tab" aria-expanded="false">Ürün yorumları</a>
+            </li>
+            <li role="presentation">
+                <a href="#video" aria-controls="video" role="tab" data-toggle="tab" aria-expanded="false">Ürün tanıtımı</a>
+            </li>
+        </ul>
+        <div class="tab-content tab-content-detail">
+            <div role="tabpanel" class="tab-pane active" id="desc">
+                <div class="well">
+                    <p>Burası ürünün detaylı açıklaması. yaz yazabildiğin kadar ok.</p>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="review">
+                <div class="well">
+                    <div class="media">
+                        @*yorum kısmının başladığı yer. foreach*@
+                        <a class="pull-left" href="#">
+                            <img class="media-object" alt="profile" width="64" height="64" src="~/Content/images/img1.jpg" />
+                            <div class="product-rating">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            </div>
+                        </a>
+                        <div class="media-body">
+                            <h5 class="media-heading"><strong>yorum yapanın ismi</strong></h5>
+                            yorum.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" alt="profile" width="64" height="64" src="~/Content/images/img1.jpg" />
+                            <div class="product-rating">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            </div>
+                        </a>
+                        <div class="media-body">
+                            <h5 class="media-heading"><strong>yorum yapanın ismi</strong></h5>
+                            2. yorum.
+                        </div>
+                    </div>
+
+                    <hr />
+                    <h4>Yorum ekle</h4>
+                    <p></p>
+                    <form role="form" id="product-comment">
+                        <div class="form-group">
+                            <label for="Name">İsim</label>
+                            <input type="text" id="Name" placeholder="isim giriniz" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">E-mail</label>
+                            <input type="text" id="Email" placeholder="e-mail giriniz" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="input-rating">derece</label>
+                            <div class="clearfix"></div>
+                            <div class="input-rating" id="input-rating" style="cursor:pointer">
+                                <span class="glyphicon glyphicon-star" title="kötü" data-score="1"></span>
+                                <span class="glyphicon glyphicon-star" title="zayıf" data-score="2"></span>
+                                <span class="glyphicon glyphicon-star" title="orta" data-score="3"></span>
+                                <span class="glyphicon glyphicon-star" title="iyi" data-score="4"></span>
+                                <span class="glyphicon glyphicon-star-empty" title="mükemmel" data-score="5"></span>
+                                <input type="hidden" name="score" value="4" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Yorumunuz:</label>
+                            <textarea id="review" class="form-control" rows="5" placeholder="yorumunuzu giriniz"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-sm">Gönder</button>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="video">
+                <div class="well">
+                    <div class="video-container">
+                        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/M3aQDS7Zopg" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row row-related">
+    <div class="col-xs-12">
+        <div class="title"><span>Benzer ürünler</span></div>
+        <div class="col-sm-3 col-md-2 box-product-outer">
+            <div class="slider widget-slider">
+                <div class="box-product">
+                    <div class="img-wrapper">
+                        <a href='@Url.Action("Detail","Test")'><img src="~/Content/images/p3 (1).jpg" alt="Flower" class="img-responsive"></a>
+                        <div class="tags">
+                            <div class="label-tags">
+                                <span class="label label-danger">popüler</span>
+                            </div>
+                        </div>
+                        <div class="option">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Sepete At">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorim">
+                                <span class="glyphicon glyphicon-heart"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <h6>
+                        <a href='@Url.Action("Detail","Test")'>Çok güzel organik falan filan</a>
+                    </h6>
+                    <div class="price">
+                        <div>34.00 tl</div>
+                    </div>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <a href='@Url.Action("Detail","Test")'>(20 kez incelendi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*diğer benzer ürünler*@
+        <div class="col-sm-3 col-md-2 box-product-outer"></div>
+        <div class="col-sm-3 col-md-2 box-product-outer"></div>
+        <div class="col-sm-3 col-md-2 box-product-outer"></div>
+        <div class="col-sm-3 col-md-2 box-product-outer"></div>
+    </div>
+</div>
+
+@section featuredScripts{
+
+    @Scripts.Render("~/Script/Select2")
+    @Scripts.Render("~/Script/OwlCarousel")
+    <script>
+        $('.select2').select2();
+    </script>
+}

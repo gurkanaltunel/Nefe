@@ -1,0 +1,36 @@
+﻿<div class="row">
+    <div class="col-sm-6 col-xs-12 login-register-form">
+        <div class="title"><span>Giriş yap!</span></div>
+        <form method="post" action="\Account\Login">
+            <div class="form-group">
+                <label for="loginEmail">E-mail</label>
+                <input type="text" class="form-control" id="loginEmail" name="email" placeholder="E-mail" required/>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Şifre</label>
+                <input type="password" class="form-control" id="loginPassword" name="password" placeholder="şifre" required/>
+            </div>
+            <div class="checkbox1">
+                <input type="checkbox" id="rememberMe" name="rememberMe"/>
+                <label for="rememberMe">Beni unutma!</label>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-sm">
+                <span class="glyphicon glyphicon-log-in"> </span>
+                Giriş
+            </button>
+
+            <button type="button" class="btn btn-info btn-sm pull-right">
+                Şifreni unuttun mu ?
+            </button>
+        </form>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <div class="title">
+            <span>Ya da bunlarla bağlan</span>
+        </div>
+        <button type="button" class="btn btn-primary btn-md"><i class="fa fa-facebook"></i> Facebook</button>
+        <button type="button" class="btn btn-info btn-md"><i class="fa fa-twitter"></i> Twitter</button>
+        <button type="button" class="btn btn-danger btn-md"><i class="fa fa-google-plus"></i> Google Plus</button>
+    </div>
+</div>

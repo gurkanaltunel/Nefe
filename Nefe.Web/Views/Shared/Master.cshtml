@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nefe</title>
+    @Styles.Render("~/Css/Bootstrap")
+    @Styles.Render("~/Css/Font-Awesome")
+    @Styles.Render("~/Css/Awesome-Checkbox")
+    @Styles.Render("~/Css/NoUISlider")
+    @Styles.Render("~/Css/MyStyle")
+</head>
+<body>
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-left header-language">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img alt="Türkçe" src="~/Content/images/tr.png" />Türkçe
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                                <li><a href="#"><img src="~/Content/images/tr.png" />Türkçe</a></li>
+                                <li><a href="#"><img src="~/Content/images/en.jpg" />English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pull-left">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" id="dropdownCurrency" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                TRY
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                                <li><a href="#"><i class="fa fa-try"></i> Try</a></li>
+                                <li><a href="#"><i class="fa fa-usd"></i> Dollar</a></li>
+                                <li><a href="#"><i class="fa fa-eur"></i> Euro</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pull-left hidden-xs">
+                        <a href="#"><i class="fa fa-phone"></i> +90 532-985-98-98</a>
+                    </div>
+                    <div class="pull-left hidden-xs">
+                        <a href="mailto:etic@etic.com"><i class="fa fa-envelope"></i> etic@@etic.com</a>
+                    </div>
+                    @{if (User != null)
+                    {
+                        <div id="account">
+                            <div class="pull-right">
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>
+                                            <i class="fa fa-user"></i> Hesabım <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownAccount">
+                                        <li><a href="#">Siparişlerim</a></li>
+                                        <li class="disabled"><a href="#">Kuponlarım</a></li>
+                                        <li class="disabled"><a href="#">Puanlarım</a></li>
+                                        <li><a href='@Url.Action("LogOut", "Account")'>Çıkış</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pull-right hidden-xs">
+                                <a href='@Url.Action("WishList","User")'><i class="fa fa-heart"></i> Favorilerim (3)</a>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="pull-right hidden-xs">
+                            <a href='@Url.Action("Login", "Account")'><i class="fa fa-sign-in"></i> Giriş</a>
+                        </div>
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle-header">
+        <div class="container">
+            <div class="main-header">
+                <div class="row">
+                    <div class="col-md-3 logo">
+                        <a href='@Url.Action("Index", "Home")'><img src="~/Content/images/logo-blue.png" class="img-responsive" /></a>
+                    </div>
+                    <div class="col-sm-8 col-md-6 search-box">
+                        <div class="input-group">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span id="search_concept">Kategoriler</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#contains">İçerik</a></li>
+                                    <li><a href="#its_equal">Eşit</a></li>
+                                    <li><a href="#greather_than">Daha büyük ></a></li>
+                                    <li><a href="#less_than">Daha küçük < </a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#all">Herşey</a></li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="search_param" value="all" id="search_param">
+                            <input type="text" class="form-control" name="x" placeholder="Arama içeriği...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 shopping-cart hidden-xs">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdown-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            Sepet : 3 ürün
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-cart">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href='@Url.Action("Detail", "Home")'><img src="~/Content/images/p1-small (1).jpg" class="media-object" width="50" alt="product" /></a>
+                                </div>
+                                <div class="media-body">
+                                    <a href='@Url.Action("Detail", "Home")' class="media-heading">organik incir falan filan</a>
+                                    <div>x 1 15 tl</div>
+                                </div>
+                                <div class="media-right">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href='@Url.Action("Detail", "Home")'><img src="~/Content/images/p2-small (1).jpg" class="media-object" width="50" alt="product" /></a>
+                                </div>
+                                <div class="media-body">
+                                    <a href='@Url.Action("Detail", "Home")' class="media-heading">organik incir falan filan</a>
+                                    <div>x 1 15 tl</div>
+                                </div>
+                                <div class="media-right">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href='@Url.Action("Detail", "Home")'><img src="~/Content/images/p3-small (1).jpg" class="media-object" width="50" alt="product" /></a>
+                                </div>
+                                <div class="media-body">
+                                    <a href='@Url.Action("Detail", "Home")' class="media-heading">organik incir falan filan</a>
+                                    <div>x 1 15 tl</div>
+                                </div>
+                                <div class="media-right">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                            </div>
+                            <div class="subtotal-cart">
+                                Toplam:
+                                <span>344 tl</span>
+                            </div>
+                            <div class="text-center cart-checkout-btn">
+                                <div class="btn-group" role="group" aria-label="sepete git ve satın al">
+                                    <button class="btn btn-default btn-sm" type="button">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        Sepete Git
+                                    </button>
+                                    <button class="btn btn-default btn-sm" type="button">
+                                        <span class="glyphicon glyphicon-check"></span>
+                                        Satın Al
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href='@Url.Action("Index", "Home")'>Ana Sayfa</a></li>
+                        <li><a href='@Url.Action("Products", "Home")'>Ürünler</a></li>
+                        <li><a href='@Url.Action("AboutUs", "Home")'>Hakkımızda</a></li>
+                        <li><a href='@Url.Action("ContactUs", "Home")'>İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderSection("featuredStyles", false)
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h4>Merak edilenler</h4><hr />
+                    <ul>
+                        <li><a href="#">Sık Sorulan Sorular</a></li>
+                        <li><a href="#">Ürünler nasıl yetişiyor</a></li>
+                        <li><a href="#">Nerede üretiliyor</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Ödeme Seçenekleri</h4><hr />
+                    <ul>
+                        <li><img src="~/Content/images/payment-2.png" /><img src="~/Content/images/payment-1.png" alt="" /></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Takip Et</h4><hr />
+                    <ul>
+                        <li><i class="fa fa-facebook"></i><a href="facebookPageAdres" style="color:#fff"> facebook</a></li>
+                        <li><i class="fa fa-twitter"></i><a href="twitterPageAdress" style="color:#fff"> twitter</a></li>
+                        <li><i class="fa fa-instagram"></i><a href="instAdress" style="color:#fff"> instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Haberdar ol</h4><hr />
+                    <input type="text" class="input-sm" placeholder="E-mail" /><button class="btn btn-info btn-sm">Üye Ol</button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2016 grknaltunel
+        </div>
+    </footer>
+
+    @Scripts.Render("~/Script/Jquery")
+    @Scripts.Render("~/Script/Bootstrap")
+    @RenderSection("featuredScripts", false)
+    @Scripts.Render("~/Script/MyScripts")
+</body>
+</html>
