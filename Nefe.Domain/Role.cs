@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Nefe.Domain
 {
-    public class Role
+    public class Role:Entity
     {
-        [Key]
-        public int RoleId { get; set; }
         [Required]
         public string RoleName { get; set; }
         public string Description { get; set; }

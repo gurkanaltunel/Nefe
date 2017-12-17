@@ -5,8 +5,6 @@ namespace Nefe.Domain
 {
     public class Product : Entity
     {
-        [Key]
-        public int ProductId { get; set; }
         public string Name { get; set; }
         [MaxLength(50)]
         public string ShortDesc { get; set; }

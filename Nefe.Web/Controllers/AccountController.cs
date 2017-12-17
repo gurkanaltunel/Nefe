@@ -44,7 +44,7 @@ namespace Nefe.Web.Controllers
             var encrypt = FormsAuthentication.Encrypt(formAuthTicket);
             var faCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypt);
             Response.Cookies.Add(faCookie);
-            return roles.Contains("Admin") ? RedirectToAction("Index", "Admin") : RedirectToAction("Index", roles.Contains("User") ? "User" : "Home");
+            return roles.Contains("Admin") ? RedirectToAction("Index", "Admin") : RedirectToAction("Index", "Home");
         }
 
         [AllowAnonymous]

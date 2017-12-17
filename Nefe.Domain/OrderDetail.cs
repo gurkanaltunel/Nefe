@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Nefe.Domain
+﻿namespace Nefe.Domain
 {
     public class OrderDetail : Entity
     {
-        [Key]
         public int OrderId { get; set; }
         public Order Order { get; set; }
         public int ProductId { get; set; }
