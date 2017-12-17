@@ -34,7 +34,7 @@ namespace Nefe.Web.Controllers
             var roles = user.Roles.Select(r => r.RoleName).ToArray();
             var customPrincipal = new CustomPrincipalSerializeModel
             {
-                UserId = user.UserId,
+                UserId = user.Id,
                 FirstName = user.Name,
                 LastName = user.LastName,
                 Roles = roles

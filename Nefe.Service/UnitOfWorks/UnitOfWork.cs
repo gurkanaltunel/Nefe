@@ -7,10 +7,16 @@ namespace Nefe.Service.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly NefeDataContext _nefeDataContext = new NefeDataContext();
+        private readonly NefeDataContext _nefeDataContext;
         private NefeRepository<User> _userRepository;
         private NefeRepository<Role> _roleRepository;
+        private NefeRepository<Address> _addressRepository;
         private bool _disposed;
+
+        public UnitOfWork()
+        {
+            _nefeDataContext = new NefeDataContext(); 
+        }
 
         public NefeRepository<User> UserRepository
         {
@@ -20,6 +26,11 @@ namespace Nefe.Service.UnitOfWorks
         public NefeRepository<Role> RoleRepository
         {
             get { return _roleRepository ?? (_roleRepository = new NefeRepository<Role>(_nefeDataContext)); }
+        }
+
+        public NefeRepository<Address> AddressRepository
+        {
+            get { return _addressRepository ?? (_addressRepository = new NefeRepository<Address>(_nefeDataContext)); }
         }
 
         public void Save()
