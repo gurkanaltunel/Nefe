@@ -1,4 +1,7 @@
-﻿namespace Nefe.Domain
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Nefe.Domain
 {
     public class Address : Entity
     {
@@ -8,6 +11,8 @@
         public Province Province { get; set; }
         public int DistrictId { get; set; }
         public District District { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(250)]
         public string AddressDesc { get; set; }
         public AddressType AddressType { get; set; }
     }

@@ -2,8 +2,9 @@
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Nefe.Web.Security;
 
-namespace Nefe.Web.Security
+namespace Nefe.Web.Attributes
 {
     public class CustomAuthorizeAttribute : AuthorizeAttribute
     {

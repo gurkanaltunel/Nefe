@@ -30,6 +30,10 @@ namespace Nefe.Service
                     m.MapLeftKey("UserId");
                     m.MapRightKey("RoleId"); 
                 });
+
+            modelBuilder.Entity<Product>().Property(x => x.UnitPrice).HasPrecision(5, 2);
+            modelBuilder.Entity<Product>().Property(x => x.Quantity).HasPrecision(4, 2);
+            modelBuilder.Entity<Product>().Property(x => x.TotalStockAmount).HasPrecision(7, 2);
         }
     }
 }

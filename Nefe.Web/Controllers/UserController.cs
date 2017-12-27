@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using Nefe.Web.Security;
+using Nefe.Web.Attributes;
 
 namespace Nefe.Web.Controllers
 {
@@ -12,11 +12,6 @@ namespace Nefe.Web.Controllers
         public ActionResult Index()
         {
             return View("WishList");
-        }
-
-        public ActionResult Register()
-        {
-            return View("Register");
         }
 
         public ActionResult WishList()

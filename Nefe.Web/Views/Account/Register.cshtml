@@ -2,30 +2,30 @@
     <div class="col-sm-8 login-register-form">
         <div class="title"><span>Kayıt ol</span></div>
         <div class="row">
-            <form>
+            <form method="post" action="\Account\Register">
                 <div class="form-group col-sm-6">
                     <label for="registerName">İsim</label>
-                    <input type="text" class="form-control" id="registerName" placeholder="İsim" />
+                    <input type="text" class="form-control" id="registerName" name="name" placeholder="İsim" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="registerLastName">Soyisim</label>
-                    <input type="text" class="form-control" id="registerLastName" placeholder="Soyisim" />
+                    <input type="text" class="form-control" id="registerLastName" name="lastName" placeholder="Soyisim" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="registerEmail">E-mail</label>
-                    <input type="text" class="form-control" id="registerEmail" placeholder="E-mail" />
+                    <input type="email" class="form-control" id="registerEmail" name="email" placeholder="E-mail" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="registerPassword">Şifre</label>
-                    <input type="password" class="form-control" id="registerPassword" placeholder="şifre" />
+                    <input type="password" class="form-control" id="registerPassword" name="password" placeholder="şifre" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="registerConfirmPassword">Şifre Tekrar</label>
-                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="şifre tekrar" />
-                </div>              
+                    <input type="password" class="form-control" id="registerConfirmPassword" name="confirmPassword" placeholder="şifre tekrar" />
+                </div>
                 <div class="col-xs-12">
                     <div class="checkbox1">
-                        <input type="checkbox" id="registerLicenceTerm" />
+                        <input type="checkbox" id="registerLicenceTerm" required />
                         <label for="registerLicenceTerm">Sözleşme şartlarını okudum. Kabul ediyorum.</label>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
     </div>
     <div class="col-sm-4">
         <div class="title"><span>Zaten üye misin!</span></div>
-        <form>
+        <form method="post" action="\Account\Login">
             <div class="form-group">
                 <label for="loginEmail">E-mail</label>
                 <input type="text" class="form-control" id="loginEmail" placeholder="E-mail" />

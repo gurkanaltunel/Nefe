@@ -1,14 +1,16 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nefe.Domain
 {
     public class Product : Entity
     {
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(50)]
         public string Name { get; set; }
-        [MaxLength(50)]
-        public string ShortDesc { get; set; }
-        public string LongDesc { get; set; }
+        [MaxLength(250)]
+        public string Descripton { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Quantity { get; set; }
         public decimal TotalPrice
@@ -34,7 +36,10 @@ namespace Nefe.Domain
                 return TotalStockAmount / Quantity > 0;
             }
         }
-        public DateTime SeasonDate { get; set; }
+        public DateTime? SeasonDate { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public int ProductPackageId { get; set; }
+        public ProductPackage ProductPackage { get; set; }
     }
 }
