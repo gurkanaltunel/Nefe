@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nefe.Domain", "Nefe.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nefe.Service", "Nefe.Service\Nefe.Service.csproj", "{AE80C1D9-1385-480A-BBE8-6D54A3DD728A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nefe.Api", "Nefe.Api\Nefe.Api.csproj", "{5CDA5D20-3084-4661-9FAB-9BF4CCEDBE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nefe.Api.Tests", "Nefe.Api.Tests\Nefe.Api.Tests.csproj", "{7C9C85F5-CE99-47CF-B606-675D17EFE393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{AE80C1D9-1385-480A-BBE8-6D54A3DD728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE80C1D9-1385-480A-BBE8-6D54A3DD728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE80C1D9-1385-480A-BBE8-6D54A3DD728A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDA5D20-3084-4661-9FAB-9BF4CCEDBE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDA5D20-3084-4661-9FAB-9BF4CCEDBE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDA5D20-3084-4661-9FAB-9BF4CCEDBE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDA5D20-3084-4661-9FAB-9BF4CCEDBE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9C85F5-CE99-47CF-B606-675D17EFE393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9C85F5-CE99-47CF-B606-675D17EFE393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9C85F5-CE99-47CF-B606-675D17EFE393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9C85F5-CE99-47CF-B606-675D17EFE393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

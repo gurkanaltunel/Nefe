@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Transactions;
 using Nefe.Domain;
 using Nefe.Service.Repository;
@@ -16,6 +17,14 @@ namespace Nefe.Service.UnitOfWorks
         public UnitOfWork()
         {
             _nefeDataContext = new NefeDataContext(); 
+        }
+
+        public NefeDataContext Context
+        {
+            get
+            {
+                return _nefeDataContext;
+            }
         }
 
         public NefeRepository<User> UserRepository
