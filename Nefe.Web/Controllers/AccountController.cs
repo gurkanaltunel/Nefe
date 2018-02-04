@@ -3,10 +3,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using Nefe.Domain;
-using Nefe.Service.UnitOfWorks;
 using Nefe.Web.Models;
 using Newtonsoft.Json;
+using RestSharp;
+using Nefe.Web.Models.Account;
 
 namespace Nefe.Web.Controllers
 {
@@ -15,12 +15,6 @@ namespace Nefe.Web.Controllers
     /// </summary>
     public class AccountController : BaseController
     {
-        private readonly UnitOfWork _unitOfWork;
-
-        public AccountController()
-        {
-            _unitOfWork = new UnitOfWork();
-        }
 
         public ActionResult Login()
         {
@@ -30,8 +24,16 @@ namespace Nefe.Web.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password, bool rememberMe = false)
         {
-            var user = _unitOfWork.UserRepository.Select(x => x.Email == email && x.Password == password).FirstOrDefault();
-            if (user == null) return View();
+            RestClient client = new RestClient("http://localhost:53807/api/Account/");
+            var request = new RestRequest("Login", Method.POST);
+            request.AddJsonBody(new
+            {
+                email = email,
+                password = password
+            });
+            var reponse = client.Execute(request).Content;
+            if (reponse == null) return View();
+            var user = JsonConvert.DeserializeObject<User>(reponse);
             var roles = user.Roles.Select(r => r.RoleName).ToArray();
             var customPrincipal = new CustomPrincipalSerializeModel
             {
@@ -43,7 +45,7 @@ namespace Nefe.Web.Controllers
             var userData = JsonConvert.SerializeObject(customPrincipal);
             var formAuthTicket = new FormsAuthenticationTicket(1, user.Email, DateTime.Now, DateTime.Now.AddMinutes(15), true, userData);
             var encrypt = FormsAuthentication.Encrypt(formAuthTicket);
-            var faCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypt);
+            var faCookie = new System.Web.HttpCookie(FormsAuthentication.FormsCookieName, encrypt);
             Response.Cookies.Add(faCookie);
             return roles.Contains("Admin") ? RedirectToAction("Index", "Admin") : RedirectToAction("Index", "Home");
         }
@@ -71,8 +73,10 @@ namespace Nefe.Web.Controllers
                 Password = password,
             };
             user.Roles.Add(new Role { RoleName = "User", Description = "Standart role" });
-            _unitOfWork.UserRepository.Insert(user);
-            _unitOfWork.Save();
+            RestClient client = new RestClient("http://localhost:53807/api/Account/");
+            var request = new RestRequest("Register", Method.POST);
+            request.AddJsonBody(user);
+            var response = client.Execute(request);
             return RedirectToAction("Login", "Account");
         }
 

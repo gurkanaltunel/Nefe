@@ -1,4 +1,4 @@
-﻿using Nefe.Domain;
+﻿using Nefe.Service.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,8 @@ namespace Nefe.Service.Interfaces
 {
     public interface IAccountService
     {
-        string Login(string email, string password);
+        UserDto Login(string email, string password);
+
+        bool Register(UserDto user);
     }
 }

@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Nefe.Service</RootNamespace>
     <AssemblyName>Nefe.Service</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +50,7 @@
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +58,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\RoleDto.cs" />
+    <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Implementations\AccountService.cs" />
     <Compile Include="Interfaces\IAccountService.cs" />
-    <Compile Include="IoC\IoCUtil.cs" />
+    <Compile Include="IoC\ApiInstaller.cs" />
+    <Compile Include="IoC\ServiceInstaller.cs" />
+    <Compile Include="IoC\WindsorDependencyResolver.cs" />
+    <Compile Include="IoC\WindsorDependencyScope.cs" />
     <Compile Include="Migrations\201712171909367_First.cs" />
     <Compile Include="Migrations\201712171909367_First.Designer.cs">
       <DependentUpon>201712171909367_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802041732459_as.cs" />
+    <Compile Include="Migrations\201802041732459_as.Designer.cs">
+      <DependentUpon>201802041732459_as.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NefeDataContext.cs" />
@@ -84,6 +95,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712171909367_First.resx">
       <DependentUpon>201712171909367_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802041732459_as.resx">
+      <DependentUpon>201802041732459_as.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
