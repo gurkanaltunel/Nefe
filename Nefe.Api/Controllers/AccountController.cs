@@ -18,8 +18,9 @@ namespace Nefe.Api.Controllers
         {
             _accountService = accountService;
         }
-       
-        public UserDto Login(string email,string password)
+        
+        [HttpGet]
+        public UserDto Login(string email, string password)
         {
             var user = _accountService.Login(email, password);
             return user;

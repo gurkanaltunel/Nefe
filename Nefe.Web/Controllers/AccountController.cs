@@ -25,8 +25,8 @@ namespace Nefe.Web.Controllers
         public ActionResult Login(string email, string password, bool rememberMe = false)
         {
             RestClient client = new RestClient("http://localhost:53807/api/Account/");
-            var request = new RestRequest("Login", Method.POST);
-            request.AddJsonBody(new
+            var request = new RestRequest("Login", Method.GET) { RequestFormat = DataFormat.Json };
+            request.AddBody(new
             {
                 email = email,
                 password = password
